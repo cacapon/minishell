@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_exit.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ttsubo <ttsubo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dayano <dayano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 14:48:09 by dayano            #+#    #+#             */
-/*   Updated: 2025/04/18 22:00:46 by ttsubo           ###   ########.fr       */
+/*   Updated: 2025/05/02 21:01:03 by dayano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(void)
 		if (strcmp("exit", line) == 0)
 		{
 			strings_line = ft_split(line, ' ');
-			if (builtin_exit(1, strings_line) == 1)
+			if (builtin_exit(1, strings_line, NULL) == 1)
 			{
 				printf("error\n");
 				free(line);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   test_echo.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ttsubo <ttsubo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dayano <dayano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 11:39:28 by ttsubo            #+#    #+#             */
-/*   Updated: 2025/04/15 12:24:20 by ttsubo           ###   ########.fr       */
+/*   Updated: 2025/05/02 21:01:13 by dayano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(void)
 			continue ;
 		cmds = ft_split(line, ' ');
 		if (!ft_strncmp(cmds[0], "echo", 4))
-			builtin_echo(_count_words(cmds), cmds);
+			builtin_echo(_count_words(cmds), cmds, NULL);
 		cmds_free(cmds);
 		free(line);
 	}
