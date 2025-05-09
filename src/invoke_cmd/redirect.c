@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   redirect.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ttsubo <ttsubo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: dayano <dayano@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 15:19:19 by dayano            #+#    #+#             */
-/*   Updated: 2025/05/09 11:38:36 by ttsubo           ###   ########.fr       */
+/*   Updated: 2025/05/09 14:19:00 by dayano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ bool	redirect_stdin(t_cmd *cmd)
 
 	path = cmd->argv[0];
 	if (cmd->type == REDIR_HEREDOC)
-		return (here_doc(path), false);
+		return (here_doc(path), true);
 	if (cmd->type != REDIR_IN)
 		return (true);
 	fd = open(path, O_RDONLY);
